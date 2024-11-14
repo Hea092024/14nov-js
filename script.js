@@ -7,7 +7,7 @@ function inputText(){
     firsText.innerHTML=input.value;
 }
 function inspect (event){
-    console.log(event);
+    console.log(event.target.id);
 
 }
 button.addEventListener("click",inputText);
