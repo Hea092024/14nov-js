@@ -1,14 +1,28 @@
-const button = document.querySelector("button");
+const button = document.querySelector("#button");
 const input = document.querySelector("#input");
-const firsText = document.querySelector("#first-p");
+const firstText = document.querySelector("#first-p");
 const secondText = document.querySelector("#second-p");
 
-function inputText(){
-    firsText.innerHTML=input.value;
+// function inputText() {
+//   firstText.textContent = input.value;
+// }
+//inspect tool
+function inspect(event) {
+  console.log(event);
 }
-function inspect (event){
-    console.log(event.target.id);
+function addPTags(tags, navn) {
+  let node = document.createElement(tags);
+  let parent = document.querySelector("div");
+  node.textContent = navn;
+  parent.appendChild(node);
+}
 
-}
-button.addEventListener("click",inputText);
-document.addEventListener("click",inspect);
+// const changeText = (event) => {
+//   if (event.target.nodeName === "P" && input.value !== "") {
+//     let temp = document.getElementById(event.target.id);
+//     temp.textContent = input.value;
+//   }
+// };
+
+button.addEventListener("click", inputText);
+document.addEventListener("click", changeText);
